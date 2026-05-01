@@ -79,6 +79,23 @@ section{padding:6.5rem 3.5rem}
 .video-frame-strip{height:10px;background:repeating-linear-gradient(90deg,rgba(200,56,42,0.5) 0,rgba(200,56,42,0.5) 12px,transparent 12px,transparent 20px)}
 .video-frame-strip.bot{margin-top:6px}.video-frame-strip.top{margin-bottom:6px}
 .video-embed{width:100%;aspect-ratio:16/9;display:block;border:none;background:#000;touch-action:manipulation}
+.video-thumb-wrapper{position:relative;width:100%;aspect-ratio:16/9;cursor:pointer;overflow:hidden}
+.video-thumbnail{width:100%;height:100%;object-fit:cover;display:block}
+.play-btn-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.3);transition:background 0.3s}
+.video-thumb-wrapper:hover .play-btn-overlay{background:rgba(0,0,0,0.5)}
+.play-btn-overlay svg{filter:drop-shadow(0 0 8px rgba(0,0,0,0.6));transition:transform 0.3s}
+.video-thumb-wrapper:hover .play-btn-overlay svg{transform:scale(1.15)}
+.video-embed-container{width:100%;aspect-ratio:16/9;background:#000}
+.video-embed-container iframe{width:100%;height:100%;border:none}
+.video-thumb-wrapper-client{position:relative;width:100%;aspect-ratio:16/9;cursor:pointer;overflow:hidden}
+.video-thumb-wrapper-client img{width:100%;height:100%;object-fit:cover;display:block}
+.play-btn-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.3);transition:background 0.3s}
+.video-thumb-wrapper-client:hover .play-btn-overlay,
+.video-thumb-wrapper:hover .play-btn-overlay{background:rgba(0,0,0,0.5)}
+.play-btn-overlay svg{filter:drop-shadow(0 0 8px rgba(0,0,0,0.6));transition:transform 0.3s}
+.video-thumb-wrapper-client:hover .play-btn-overlay svg,
+.video-thumb-wrapper:hover .play-btn-overlay svg{transform:scale(1.15)}
+.client-video-embed{width:100%;height:100%;border:none;background:#000}
 .sr-meta{display:flex;gap:2rem;margin-top:1.2rem;flex-wrap:wrap}
 .sr-meta span{font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(240,236,227,0.25)}
 .sr-meta strong{color:rgba(240,236,227,0.55);font-weight:400}

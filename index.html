@@ -97,12 +97,26 @@
     <p class="sr-desc reveal delay-2">30–50 seconds. This is my editing style, my pacing, my creative eye — everything a potential client needs to see in one cut.</p>
     <div class="video-frame-outer reveal delay-3">
       <div class="video-frame-strip top"></div>
-      <iframe class="video-embed"
-        src="https://drive.google.com/file/d/1CTz5V1FW23HR0-hmfhIIxa1E__TbIQpU/preview"
-        allow="autoplay" allowfullscreen loading="lazy">
-      </iframe>
+      <div class="video-thumb-wrapper" onclick="playShowreelVideo()">
+        <img src="Images/7f90525e-9d25-4fea-a77c-2a5bb55594ca.png" alt="Portfolio Intro Thumbnail" class="video-thumbnail">
+        <div class="play-btn-overlay">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="#fff"><polygon points="5 3 19 12 5 21"/></svg>
+        </div>
+      </div>
+      <div class="video-embed-container" id="videoEmbedContainer" style="display:none;">
+        <iframe class="video-embed"
+          src="https://drive.google.com/file/d/1CTz5V1FW23HR0-hmfhIIxa1E__TbIQpU/preview"
+          allow="autoplay" allowfullscreen loading="lazy">
+        </iframe>
+      </div>
       <div class="video-frame-strip bot"></div>
     </div>
+    <script>
+      function playShowreelVideo() {
+        document.querySelector('.video-thumb-wrapper').style.display = 'none';
+        document.getElementById('videoEmbedContainer').style.display = 'block';
+      }
+    </script>
     <div class="sr-meta">
       <span>Type: <strong>Showreel</strong></span>
       <span>Tools: <strong>Premiere Pro · After Effects · CapCut</strong></span>
