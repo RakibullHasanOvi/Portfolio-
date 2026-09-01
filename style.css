@@ -104,12 +104,16 @@ section{padding:6.5rem 3.5rem}
 .client-work{background:var(--surface)}
 .client-intro{max-width:600px;margin-bottom:3.5rem}
 .client-intro p{font-size:0.92rem;color:rgba(240,236,227,0.45);line-height:1.75}
-.client-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.client-card{background:var(--card-bg);border:1px solid rgba(240,236,227,0.07);overflow:hidden;transition:border-color 0.25s}
-.client-card:hover{border-color:rgba(200,56,42,0.35)}
+.client-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;align-items:start}
+.client-card{background:var(--card-bg);border:1px solid rgba(240,236,227,0.07);overflow:hidden;transition:border-color 0.25s,transform 0.25s;display:flex;flex-direction:column}
+.client-card:hover{border-color:rgba(200,56,42,0.35);transform:translateY(-2px)}
+.client-video-wrap{position:relative;display:block;overflow:hidden;background:#080604}
 .client-video-wrap::before,.client-video-wrap::after{content:'';display:block;height:8px;background:repeating-linear-gradient(90deg,rgba(200,56,42,0.4) 0,rgba(200,56,42,0.4) 10px,transparent 10px,transparent 17px)}
-.vid-responsive{position:relative;width:100%;aspect-ratio:16/9;background:#080604;touch-action:manipulation}
-.vid-responsive iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
+.client-video-link{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;text-decoration:none}
+.client-preview-image{display:block;width:100%;height:100%;object-fit:cover;transition:transform 0.35s ease,filter 0.35s ease}
+.client-card:hover .client-preview-image{transform:scale(1.04);filter:saturate(1.1)}
+.client-video-badge{position:absolute;right:0.9rem;bottom:0.9rem;display:inline-flex;align-items:center;gap:0.45rem;padding:0.45rem 0.8rem;background:rgba(8,6,4,0.7);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.12);color:var(--cream);font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;box-shadow:0 12px 30px rgba(0,0,0,0.2)}
+.client-video-badge svg{width:11px;height:11px;fill:var(--red)}
 .mob-watch-btn{display:none;align-items:center;justify-content:center;gap:0.5rem;background:rgba(200,56,42,0.12);border:1px solid rgba(200,56,42,0.25);color:var(--red);text-decoration:none;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;padding:0.65rem 1.2rem;margin:0.6rem 1.3rem 0;transition:background 0.2s}
 .mob-watch-btn:hover{background:rgba(200,56,42,0.2)}
 .client-info{padding:1.2rem 1.4rem 1.5rem}
@@ -266,8 +270,16 @@ footer p{font-size:0.7rem;letter-spacing:0.1em;color:rgba(240,236,227,0.18)}
   .vid-responsive{aspect-ratio:9/16;max-height:65vh}
   .vid-responsive iframe{display:block;width:100%;height:100%}
   .mob-watch-btn{display:flex}
-  .client-grid{grid-template-columns:1fr}
-  .client-card{max-height:70vh;overflow-y:auto}
+  .client-grid{grid-template-columns:1fr;gap:1.2rem}
+  .client-card{overflow:hidden;border-radius:16px}
+  .client-video-link{aspect-ratio:16/9}
+  .client-video-wrap::before,.client-video-wrap::after{height:6px}
+  .client-info{padding:1rem 1rem 1.2rem}
+  .client-tag{letter-spacing:0.14em}
+  .client-title{font-size:1.1rem}
+  .client-desc{font-size:0.77rem;line-height:1.65}
+  .client-pills{gap:0.4rem}
+  .client-pill{font-size:0.56rem;letter-spacing:0.1em;padding:0.2rem 0.55rem}
   .about{grid-template-columns:1fr;gap:3rem}
   .skills-layout{grid-template-columns:1fr;gap:3rem}
   .channel-card{grid-template-columns:1fr;gap:2rem}
